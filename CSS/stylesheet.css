@@ -1,0 +1,103 @@
+body{
+    background-color: black
+}
+
+.wrapper{
+    margin-top: 100px; 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col{
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col input:first-child{
+    margin-top: 35px;
+}
+
+.flex-row{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+.profile-picture{
+    height: inherit;
+    width: auto;
+    border-radius: 50%;
+    background-size: cover;
+    
+}
+
+.picture-container:hover .picture-overlay{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-container:hover .profile-picture{
+    filter: grayscale(1) contrast(120%) brightness(20%);
+}
+
+.picture-container{
+    position: relative;
+    height: 160px;
+    width: auto;
+    margin-top: -40%;
+    border: 5px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.picture-overlay{
+     display: none;
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     border-radius: 50%;
+}
+
+.picture-overlay i{
+    color: white;
+    font-size: 2rem;
+}
+
+.overlay-text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+ 
+.card{
+    border: 1px solid whitesmoke;
+    border-radius: 10px; 
+    background-color: white;
+    box-shadow: whitesmoke; 
+    padding: 0 50px 30px;
+    box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+
+}
+
+input{
+    margin: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+
+:root{
+    --color-primary: #000000;
+}
