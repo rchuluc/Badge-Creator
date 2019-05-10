@@ -1,9 +1,62 @@
 body{
-    background-color: black
+    background-color: grey
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas{
+    display: none
+}
+
+#presentation{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#name{
+    font-size: 1.4em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#role{
+    font-weight: 500;
+}
+
+#separator{
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    width: 15%;
+}
+
+#photo{
+  display:none;
+}
+
+
+.linkedIn-border{
+    border: 5px solid var(--linkedIn-blue);
+    border-radius: 3px;
+}
+
+.linkedIn-label{
+    position: relative;
+    bottom: -4px;
+    color: white;
+    font-size: 1.2rem;
+    background-color: var(--linkedIn-blue);
+    border-radius: 3px;
+    padding: 3px 10px 0px 10px;
+}
+
+
+.hide{
+    display: none;
 }
 
 .wrapper{
-    margin-top: 100px; 
+    margin-top: 25vh; 
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -18,8 +71,10 @@ body{
     align-items: center;
 }
 
-.flex-col input:first-child{
-    margin-top: 35px;
+.flex-col p:first-child{
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+    margin-bottom: 5px;
 }
 
 .flex-row{
@@ -30,10 +85,10 @@ body{
 
 .profile-picture{
     height: inherit;
-    width: auto;
+    width: inherit;
     border-radius: 50%;
     background-size: cover;
-    
+
 }
 
 .picture-container:hover .picture-overlay{
@@ -50,7 +105,7 @@ body{
 .picture-container{
     position: relative;
     height: 160px;
-    width: auto;
+    width:  160px;
     margin-top: -40%;
     border: 5px solid white;
     border-radius: 50%;
@@ -76,7 +131,6 @@ body{
 }
 
 .overlay-text{
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
  
@@ -92,12 +146,50 @@ body{
 
 input{
     margin: 5px;
-    border: 1px solid lightgray;
+    border: 1px solid transparent;
     border-radius: 5px;
     padding: 4px 10px;
+    text-align: center;
+}
+
+.button{
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-top: 35px;
+}
+
+.button:hover{
+    background-color: var(--color-primary-dark);
+}
+
+.button:active{
+    transition-duration: 300ms;
+    background-color: var(--color-primary-light);
+}
+
+button:active, button:focus{
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+    border-color: var(--color-primary-light);
+    transition-duration: 200ms;
 }
 
 
+
+
 :root{
-    --color-primary: #000000;
+    --color-primary: #2196f3;
+    --color-primary-light: #4dabf5;
+    --color-primary-dark: #1769aa;
+    --linkedIn-blue: #0077b5;
 }
