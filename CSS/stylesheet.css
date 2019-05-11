@@ -50,13 +50,28 @@ canvas{
     padding: 3px 10px 0px 10px;
 }
 
+.github-border{
+    border: 5px solid var(--github-black);
+    border-radius: 3px;
+}
+
+.github-label{
+    position: relative;
+    bottom: -4px;
+    color: white;
+    font-size: 1.2rem;
+    background-color: var(--github-black);
+    border-radius: 3px;
+    padding: 3px 10px 0px 10px;
+}
+
 
 .hide{
-    display: none;
+    display: none !important;
 }
 
 .wrapper{
-    margin-top: 25vh; 
+    margin-top: 15vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -71,7 +86,7 @@ canvas{
     align-items: center;
 }
 
-.flex-col p:first-child{
+.flex-col #presentation{
     color: rgba(0, 0, 0, 0.7);
     margin-top: 40px;
     margin-bottom: 5px;
@@ -83,13 +98,18 @@ canvas{
     align-content: center;
 }
 
-.profile-picture{
+.profile-picture, .profile-picture-default{
     height: inherit;
     width: inherit;
     border-radius: 50%;
     background-size: cover;
-
 }
+
+.profile-picture-default{
+    background-color: var(--color-primary-light);
+    font-size: 5.5rem;
+}
+
 
 .picture-container:hover .picture-overlay{
     display: flex;
@@ -98,15 +118,10 @@ canvas{
     align-items: center;
 }
 
-.picture-container:hover .profile-picture{
-    filter: grayscale(1) contrast(120%) brightness(20%);
-}
-
 .picture-container{
     position: relative;
     height: 160px;
     width:  160px;
-    margin-top: -40%;
     border: 5px solid white;
     border-radius: 50%;
     cursor: pointer;
@@ -123,6 +138,7 @@ canvas{
      height: 100%;
      width: 100%;
      border-radius: 50%;
+     background-color: rgba(0, 0, 0, 0.75);
 }
 
 .picture-overlay i{
@@ -139,8 +155,10 @@ canvas{
     border-radius: 10px; 
     background-color: white;
     box-shadow: whitesmoke; 
-    padding: 0 50px 30px;
-    box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+    padding: 80px 50px 30px;
+    box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.3);
+    height: 100%;
+    margin-top: -80px
 
 }
 
@@ -192,4 +210,5 @@ input:focus{
     --color-primary-light: #4dabf5;
     --color-primary-dark: #1769aa;
     --linkedIn-blue: #0077b5;
+    --github-black: #24292e;
 }

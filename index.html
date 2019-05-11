@@ -7,29 +7,36 @@
     <link rel="stylesheet" href="CSS/stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="JS/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="JS/html2canvas.js"></script>
     <title>Upload a photo</title>
 </head>
 <body>
 
     <div class="wrapper">
-        <div id="businessCard">
-            <div class="card flex-col">
-                <div class="picture-container" id="photoContainer" onclick="uploadPhoto()">
-                    <input type="file" accept=".png, .jpg, .jpeg" id="photo" onchange="handleFile(files[0])">
-                    <img draggable="false" class="profile-picture" id="profile-picture" src="Assets/0.jpg" alt="">
-                <div class="picture-overlay">
-                    <i class="fas fa-upload"></i>
-                    <p class="overlay-text">Upload a photo</p>
+        <div id="businessCard" class="flex-col">
+            <div class="picture-container" id="photoContainer" onclick="uploadPhoto()">
+                <input type="file" accept=".png, .jpg, .jpeg" id="photo" onchange="handleFile(files[0])">
+            
+                <div class="profile-picture-default flex-col" id="default-picture">
+                    <p>🐱</p>
                 </div>
+                
+            <img draggable="false" class="profile-picture" id="profile-picture" src="" alt="">
+            
+            <div class="picture-overlay">
+                <i class="fas fa-upload"></i>
+                <p class="overlay-text">Upload a photo</p>
             </div>
+
+        </div>
+            <div class="card flex-col">
     
                 <div class="flex-col">
                     <p id="presentation">Hi! i'm</p>
                     <span id="separator"></span>
                     <input type="text" id="name" placeholder="Name">
                     <input type="text" id="role" placeholder="Job">
-                    <input type="url" id="linkedIn" placeholder="LinkedIn or GitHub" onchange="generateQRCode()">
+                    <input type="url" id="linkedIn" placeholder="LinkedIn or GitHub" onchange="generateQRCode()" onblur="generateQRCode()">
                     <label for="linkedInQR" id="label"></label>
                     <img id="linkedInQR" src"" alt="" onclick="handleEditQR()">
                 </div>
@@ -37,6 +44,7 @@
         </div>
 
         <button class="button" onclick="handleCreate()">Create</button>
+        <a id="link"></a>
     </div>
 
 </body>
