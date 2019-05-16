@@ -2,5 +2,5 @@
 
 Simple application to create badges with QRcode and download a PNG of it.
 
-![Badge Example]
-(/myAwesomeCard.png)
+![Badge Example](myAwesomeCard.png?raw=true "Title")
+
