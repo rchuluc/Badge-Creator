@@ -1,7 +1,15 @@
 
 uploadPhoto = () => document.getElementById('photo').click()
 
+window.onload = () =>{
 
+    const container = document.getElementById('emojiFace')
+    const emojiList = ['🐯','🐼', '🐶', '🦊', '🦁' , '🐱' , '🐹', '🐰', '🐻', '🐨']
+    
+    const indexRand = Math.floor(Math.random() * emojiList.length)
+    console.log(emojiList[indexRand])
+    container.innerHTML = emojiList[indexRand]
+}
 
 handleFile = (file) => {
     
@@ -34,6 +42,7 @@ handleCreate = () =>{
 }
 
 generateQRCode = () =>{
+
     const inputURL = document.getElementById('linkedIn')
     const QRcontainer = document.getElementById('linkedInQR')
     const QRlabel = document.getElementById('label')
@@ -41,7 +50,6 @@ generateQRCode = () =>{
     let label = ''
     let border = ''
 
-    
     let src = `https://chart.googleapis.com/chart?cht=qr&chl=${inputURL.value}&chs=120x120&chld=L|0`
     inputURL.classList.add('hide')
     QRcontainer.src = src
@@ -51,22 +59,21 @@ generateQRCode = () =>{
         border = 'linkedIn-border'
         icon = 'fab fa-linkedin'
 
-    } if (inputURL.value.search('github') != -1){
+    } else if (inputURL.value.search('github') != -1){
         label = 'github-label'
         border = 'github-border'
         icon = 'fab fa-github' 
-
-    }
-
+    } 
+    
     QRlabel.innerHTML = `<i class="${label} ${icon}"></i>`
     QRcontainer.classList.add(border)
     QRlabel.classList.remove('hide')
     QRcontainer.classList.remove('hide')
-
     
 }
 
 handleEditQR = () =>{
+    
     const linkedinURL = document.getElementById("linkedIn")
     const QRcontainer = document.getElementById("linkedInQR")
     const QRlabel = document.getElementById('label')
@@ -76,6 +83,7 @@ handleEditQR = () =>{
     QRcontainer.classList.remove('github-border', 'linkedIn-border')
     linkedinURL.classList.remove('hide')
     linkedinURL.focus()
+
 }
 
 
