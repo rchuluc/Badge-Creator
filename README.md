@@ -1,3 +1,3 @@
-# Business Card Creator
+# Badge Creator
 
-Simple application to create badges with QRcode
+Simple application to create badges with QRcode and download a PNG of it.
