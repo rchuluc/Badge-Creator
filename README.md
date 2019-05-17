@@ -1,7 +1,8 @@
 # Badge Creator
 
-Simple application to create badges with QRcode and download a PNG of it.
-<a href="https://rchuluc.github.io/Badge-Creator/">Check out</a>
+Simple application to create badges with QRcode and download a PNG file.
+
+<a href="https://rchuluc.github.io/Badge-Creator/">Create your own!</a>
 
 <p align="center">
   <img src="myAwesomeCard.png">
